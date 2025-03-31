@@ -11,19 +11,13 @@ const userSchema = new mongoose.Schema({
         unique:true,
         lowercase:true,
         trim:true,
-        match:[
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 
-            "Please enter a valid email address"
-        ]
+
 
     },
     password:{
         type:String,
         required:true,
-        match:[
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 
-            "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
-        ]
+ 
     },
     verifyOtp:{
         type:String,
